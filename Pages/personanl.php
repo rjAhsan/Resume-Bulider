@@ -1,10 +1,40 @@
+	<?php
+	
+	session_start();
+	
+	if(isset($_POST['personal'])){
+	$userid= $_SESSION["user_id"];
+	$fname=$_REQUEST['fname'];
+	$lname=$_REQUEST['lname'];
+	$email=$_REQUEST['email'];
+	$address=$_REQUEST['address'];
+	$phone=$_REQUEST['phone'];
+	$link=$_REQUEST['link'];
+	
+	
+	
+	include('../Backend/db.php');
+	
+	$sql = "INSERT INTO profiles (fname,lname,email,address,phone,link,user_id)
+	VALUES ('$fname','$lname','$email','$address','$phone','$link','$userid')";
+	
+	
+	include('../Backend/db2.php');
 
-		
+	
+	
+	}
 
-			<?php
+	
+	
+	
+	
+	?>
+	<?php
 			include '../layouts/Header.php';
 			include '../layouts/SideBar.php';
-			
+
+
 			?>
 			
 			<div class="content-wrapper">
@@ -35,7 +65,7 @@
 								</div>
 								<div class="card-body">
 
-									<form action="../Backend/personal.php" method="POST">
+									<form  method="POST">
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="fas fa-user-check"></i></span>
@@ -78,7 +108,7 @@
 										<input type="url" class="form-control" name="link" placeholder="Portfolio">
 									</div>
 									<div class="card-footer">
-										<button type="submit" class="btn btn-primary flot-">Submit</button>
+										<input type="submit" name="personal" class="btn btn-primary flot-">Submit</input>
 									  </div>
 									</form>
 								</div>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+$user_id = $_SESSION["user_id"];
+$email = $_SESSION["email"];
+$_SESSION["password"];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +39,7 @@
 								class="fas fa-bars"></i></a>
 					</li>
 					<li class="nav-item d-none d-sm-inline-block">
-						<a href="../../index3.html" class="nav-link">Home</a>
+						<a href="#" class="nav-link">Home</a>
 					</li>
 					<li class="nav-item d-none d-sm-inline-block">
 						<a href="#" class="nav-link">Contact</a>
@@ -47,7 +55,7 @@
 			<!-- Main Sidebar Container -->
 			<aside class="main-sidebar sidebar-dark-primary elevation-4">
 				<!-- Brand Logo -->
-				<a href="../index.html" class="brand-link">
+				<a href="index.php" class="brand-link">
 					<img src="assets/template/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
 						class="brand-image img-circle elevation-3" style="opacity: .8">
 					<span class="brand-text font-weight-light"><strong>Resume Bulider</strong> </span>
@@ -166,8 +174,16 @@
 								</button>
 							</div>
 						</div>
-						<h2>User Data</h2>
-						<!-- /.card-body -->
+						<h2>
+						<?php
+							echo $user_id . "<br>";
+							echo $email . "<br>";
+						
+						?>
+						
+						
+						</h2>
+						
 						<div class="card-footer">
 							Footer
 						</div>
@@ -208,3 +224,5 @@
 </body>
 
 </html>
+
+?>

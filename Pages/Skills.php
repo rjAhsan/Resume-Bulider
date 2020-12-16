@@ -1,4 +1,28 @@
+<?php
+session_start();
 
+if(isset($_POST['Skills'])){
+	$userid= $_SESSION["user_id"];
+
+$SKillName=$_REQUEST['SName'] ;
+$Level=$_REQUEST['skilllevel'] ;
+
+include('../Backend/db.php');
+
+ $sql = "INSERT INTO skills (SName,skilllevel,user_id)
+ VALUES ('$SKillName','$Level',$userid)";
+ 
+ 
+ 
+ include('../Backend/db2.php');
+
+
+
+
+}
+
+
+?>
 		
 
 			<?php
@@ -35,7 +59,7 @@
 							</div>
 							<div class="card-body">
 
-								<form action="../Backend/Skills.php" method="POST">
+								<form  method="POST">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-university"></i></span>
@@ -59,7 +83,7 @@
 								
 							
 								<div class="card-footer">
-									<button type="submit" class="btn btn-primary flot-">Add</button>
+									<input name="Skills" type="submit" class="btn btn-primary flot-"></button>
 								  </div>
 								</form>
 							</div>
