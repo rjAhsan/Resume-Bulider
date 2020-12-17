@@ -1,4 +1,29 @@
+<?php
+session_start();
+include "../Backend/Auth.php";
 
+
+if(isset($_POST['edu'])){
+	$userid= $_SESSION["user_id"];
+	$instName=$_REQUEST['InstName'];
+	$degree=$_REQUEST['degree'];
+	$grade=$_REQUEST['grade'];
+	$startdate=$_REQUEST['sdate'];
+	$enddate=$_REQUEST['edate'];
+	$status=$_REQUEST['status'];
+   	include('../Backend/db.php');
+   
+	$sql = "INSERT INTO educations (InstName,degree,grade,sdate,edate,status,user_id)
+	VALUES ('$instName','$degree','$grade','$startdate','$enddate','$status','$userid')";
+	
+	
+	include('../Backend/db2.php');
+   
+   
+}
+
+
+?>
 		
 
 			<?php
@@ -32,10 +57,11 @@
 						<div class="card card-info">
 							<div class="card-header">
 								<h3 class="card-title text-center">Education</h3>
+								<span>	<?php echo $_SESSION["email"];?></span>
 							</div>
 							<div class="card-body">
 
-								<form action="../Backend/Education.php" method="POST">
+								<form  method="POST">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-university"></i></span>
@@ -109,7 +135,7 @@
 									 </select>
 								</div>
 								<div class="card-footer">
-									<button type="submit" class="btn btn-primary flot-">Submit</button>
+									<button name="edu" type="submit" class="btn btn-primary flot-">Submit</button>
 								  </div>
 								</form>
 							</div>

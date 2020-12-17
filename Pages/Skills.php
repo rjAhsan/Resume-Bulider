@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "../Backend/Auth.php";
 if(isset($_POST['Skills'])){
 	$userid= $_SESSION["user_id"];
 

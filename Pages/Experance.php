@@ -1,4 +1,33 @@
+<?php
+session_start();
+include "../Backend/Auth.php"; 
 
+if(isset($_POST['exp'])){
+ 
+
+$userid= $_SESSION["user_id"];
+$CompanyName=$_REQUEST['CName'] ;
+ $DesignitionName=$_REQUEST['DName'];
+ $sdate=$_REQUEST['sdate'];
+ $edate=$_REQUEST['edate'];
+ $Jobsummry=$_REQUEST['Jobsummry'];
+
+
+
+
+ include('../Backend/db.php');
+
+ $sql = "INSERT INTO experience (CName,DName,sdate,edate,Jobsummry,user_id)
+ VALUES ('$CompanyName','$DesignitionName','$sdate','$edate','$Jobsummry','$userid')";
+ 
+ 
+ include('../Backend/db2.php');
+
+}
+
+
+
+?>
 		
 
 			<?php
@@ -35,7 +64,7 @@
 							</div>
 							<div class="card-body">
 
-								<form action="../Backend/Expriance.php" method="POST">
+								<form  method="POST">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-university"></i></span>
@@ -81,7 +110,7 @@
                         	<textarea class="form-control" name="Jobsummry" rows="3" placeholder="Enter your Job Summary"></textarea>
                       		</div>
 								<div class="card-footer">
-									<button type="submit" class="btn btn-primary flot-">Submit</button>
+									<input name="exp" type="submit" class="btn btn-primary flot-"></input>
 								  </div>
 								</form>
 							</div>

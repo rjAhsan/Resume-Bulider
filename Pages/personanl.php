@@ -1,6 +1,7 @@
 	<?php
 	
 	session_start();
+	include "../Backend/Auth.php";
 	
 	if(isset($_POST['personal'])){
 	$userid= $_SESSION["user_id"];
@@ -11,14 +12,10 @@
 	$phone=$_REQUEST['phone'];
 	$link=$_REQUEST['link'];
 	
-	
-	
 	include('../Backend/db.php');
 	
 	$sql = "INSERT INTO profiles (fname,lname,email,address,phone,link,user_id)
 	VALUES ('$fname','$lname','$email','$address','$phone','$link','$userid')";
-	
-	
 	include('../Backend/db2.php');
 
 	
@@ -61,7 +58,7 @@
 						<div class="card-body">
 							<div class="card card-info">
 								<div class="card-header">
-									<h3 class="card-title text-center">personanl Info</h3>
+									<h3 class="card-title text-center">personanl Info <?php echo $_SESSION["email"];?></h3>
 								</div>
 								<div class="card-body">
 
@@ -108,7 +105,7 @@
 										<input type="url" class="form-control" name="link" placeholder="Portfolio">
 									</div>
 									<div class="card-footer">
-										<input type="submit" name="personal" class="btn btn-primary flot-">Submit</input>
+										<input type="submit" name="personal" class="btn btn-primary flot-"></input>
 									  </div>
 									</form>
 								</div>

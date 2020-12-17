@@ -1,9 +1,7 @@
 <?php
 session_start();
-$user_id = $_SESSION["user_id"];
-$email = $_SESSION["email"];
-$_SESSION["password"];
 
+include "Backend/Auth.php"
 ?>
 
 <!DOCTYPE html>
@@ -174,15 +172,8 @@ $_SESSION["password"];
 								</button>
 							</div>
 						</div>
-						<h2>
-						<?php
-							echo $user_id . "<br>";
-							echo $email . "<br>";
-						
-						?>
-						
-						
-						</h2>
+							
+				
 						
 						<div class="card-footer">
 							Footer
@@ -216,13 +207,44 @@ $_SESSION["password"];
 		<script src="assets/template/plugins/jquery/jquery.min.js"></script>
 		<!-- Bootstrap 4 -->
 		<script src="assets/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		
+		<script src="assets/template/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="assets/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+		<script src="assets/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+		<script src="assets/template/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+		<script src="assets/template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+		<script src="assets/template/plugins/jszip/jszip.min.js"></script>
+		<script src="assets/template/plugins/pdfmake/pdfmake.min.js"></script>
+		<script src="assets/template/plugins/pdfmake/vfs_fonts.js"></script>
+		<script src="assets/template/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+		<script src="assets/template/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+		<script src="assets/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+		
+		
 		<!-- AdminLTE App -->
 		<script src="assets/template/dist/js/adminlte.min.js"></script>
 		<!-- AdminLTE for demo purposes -->
 		<script src="assets/template/dist/js/demo.js"></script>
+
+		<script>
+			$(document).ready(function(){
+
+				$("#example1").DataTable({
+					"responsive": true, "lengthChange": false, "autoWidth": false,
+					"buttons": [ "pdf", "print"]
+				  }).buttons().container().appendTo("#example1_wrapper .col-md-6:eq(0)");
+
+
+
+				
+
+			});
+			</script>
+
+
+
 	</body>
 </body>
 
 </html>
-
-?>
