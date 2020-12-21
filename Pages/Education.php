@@ -151,6 +151,14 @@ if(isset($_POST['edu'])){
 				<!-- /.card -->
 
 			</section>
+
+			<!-- Deleted Education  -->
+
+
+	
+
+
+
 			<!-- /.content -->
 		</div>
 			

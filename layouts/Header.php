@@ -1,8 +1,4 @@
-<?php
-
-echo
-
-'<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -18,6 +14,7 @@ echo
 	<link rel="stylesheet" href="../assets/template/plugins/fontawesome-free/css/all.min.css">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="../assets/template/dist/css/adminlte.min.css">
+
 
 </head>
 
@@ -44,5 +41,4 @@ echo
 
 				<!-- Right navbar links -->
 
-			</nav>'
-?>
+			</nav>

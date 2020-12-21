@@ -17,7 +17,7 @@ else{
   include('../Backend/db.php');
   $sql = "SELECT email, id, password FROM users WHERE email='$useremail'";
   $result = $conn->query($sql);
-   mysqli_num_rows($result);
+  mysqli_num_rows($result);
   
   if( mysqli_num_rows($result) > 0){
     while ($row = $result->fetch_assoc()) {
@@ -30,7 +30,7 @@ else{
         $_SESSION["user_id"] = $id;
         $_SESSION["email"] = $email;
         $_SESSION["password"]=$password;
-        header('Location: http://localhost/ResumeBulider/index.php');
+        header('Location: http://localhost/ResumeBulider/Pages/index.php');
 
       }
       else{
@@ -76,15 +76,6 @@ else{
 <div class="login-box">
   <!-- /.login-logo -->
 
-  <?php
-// Set session variables
-$_SESSION["user_id"] = 1;
-$_SESSION["email"] = "admin@admin.com";
-
-?>
-
-
-
 
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
@@ -110,15 +101,27 @@ $_SESSION["email"] = "admin@admin.com";
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-2">
          
           <!-- /.col -->
           <div class="col-12">
-            <input name="login"  type="submit" class="btn btn-primary btn-block"></input>
+            <input name="login" Value="Login"  type="submit" class="btn btn-primary btn-block"></input>
           </div>
           <!-- /.col -->
         </div>
       </form>
+
+      <div class="row">
+         
+          <!-- /.col -->
+          <div class="col-12">
+
+          <a href="register.php">
+            <input value="Register" type="submit" class="btn btn-primary btn-block"></input>
+            </a>
+          </div>
+          <!-- /.col -->
+        </div>
 
       
     </div>

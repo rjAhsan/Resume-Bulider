@@ -121,6 +121,16 @@
 					<!-- /.card -->
 
 				</section>
+
+
+				<!-- update data -->
+
+
+
+
+
+
+
 				<!-- /.content -->
 			</div>
 <?php

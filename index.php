@@ -1,250 +1,114 @@
-<?php
-session_start();
-
-include "Backend/Auth.php"
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Resume Bulider App Main-Page">
-	<meta name="keywords" content="CV, Resume, Job">
-	<meta name="author" content="Ahsan Ashraf">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="assets/template/plugins/fontawesome-free/css/all.min.css">
-	<!-- Theme style -->
-	<link rel="stylesheet" href="assets/template/dist/css/adminlte.min.css">
+  <title>Kelly Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
+  <!-- Favicons -->
+  <link href="assets/template/assets/img/favicon.png" rel="icon">
+  <link href="assets/template/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/temp2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/temp2/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/temp2/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/temp2/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/temp2/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/temp2/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- temp2 Main CSS File -->
+  <link href="assets/temp2/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v2.1.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
 
-	<body class="hold-transition sidebar-mini">
-		<!-- Site wrapper -->
-		<div class="wrapper">
-			<!-- Navbar -->
-			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
-				<!-- Left navbar links -->
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-								class="fas fa-bars"></i></a>
-					</li>
-					<li class="nav-item d-none d-sm-inline-block">
-						<a href="#" class="nav-link">Home</a>
-					</li>
-					<li class="nav-item d-none d-sm-inline-block">
-						<a href="#" class="nav-link">Contact</a>
-					</li>
-				</ul>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-				<!-- Right navbar links -->
+      <h1 class="logo"><a href="#">SmarTEchSolution</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-			</nav>
-			
-			<!-- /.navbar -->
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="Pages/login.php">Login</a></li>
+          <li><a href="Pages/register.php">Register</a></li>
+         
+        </ul>
+      </nav><!-- .nav-menu -->
 
-			<!-- Main Sidebar Container -->
-			<aside class="main-sidebar sidebar-dark-primary elevation-4">
-				<!-- Brand Logo -->
-				<a href="index.php" class="brand-link">
-					<img src="assets/template/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
-						class="brand-image img-circle elevation-3" style="opacity: .8">
-					<span class="brand-text font-weight-light"><strong>Resume Bulider</strong> </span>
-				</a>
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
 
-				<!-- Sidebar -->
-				<div class="sidebar">
-					<!-- Sidebar user (optional) -->
+    </div>
 
-					<div class="user-panel mt-3 pb-3 mb-3 d-flex">
-						<div class="image">
-							<img src="assets/template/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-								alt="User Image">
-						</div>
-						<div class="info">
-							<a href="#" class="d-block">Alexander Pierce</a>
-						</div>
-					</div>
+  </header><!-- End Header -->
 
-					<!-- SidebarSearch Form -->
-					<div class="form-inline">
-						<div class="input-group" data-widget="sidebar-search">
-							<input class="form-control form-control-sidebar" type="search" placeholder="Search"
-								aria-label="Search">
-							<div class="input-group-append">
-								<button class="btn btn-sidebar">
-									<i class="fas fa-search fa-fw"></i>
-								</button>
-							</div>
-						</div>
-					</div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Bulid Your Awsome Resume Today</h1>
+      
+      
+      <a href="#" class="btn-about">About Me</a>
+    </div>
+  </section><!-- End Hero -->
 
-					<!-- Sidebar Menu -->
-					<nav class="mt-2">
-						<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-							data-accordion="false">
-							<!-- Add icons to the links using the .nav-icon class
-					   with font-awesome or any other icon font library -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Bulid Your Awsome Resume Today</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
-							<li class="nav-item">
-								<a href="Pages/personanl.php" class="nav-link">
-									<i class="nav-icon fas fa-user-clock"></i>
-									<p>
-										Personal-Info
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
+  <!-- Vendor JS Files -->
+  <script src="assets/temp2/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/temp2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/temp2/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/temp2/assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/temp2/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/temp2/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/temp2/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/temp2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/temp2/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/temp2/assets/vendor/aos/aos.js"></script>
 
-							</li>
+  <!-- Template Main JS File -->
+  <script src="assets/temp2/assets/js/main.js"></script>
 
-							<li class="nav-item">
-								<a href="Pages/Education.php" class="nav-link">
-									<i class="nav-icon fas fa-school"></i>
-									<p>
-										Education
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-
-							</li>
-
-							<li class="nav-item">
-								<a href="Pages/Experance.php" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Experiance
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-
-							</li>
-
-							<li class="nav-item">
-								<a href="Pages/Skills.php" class="nav-link">
-									<i class="nav-icon fas fa-tools"></i>
-									<p>
-										Skills
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								
-							</li>
-
-
-
-
-						</ul>
-					</nav>
-					<!-- /.sidebar-menu -->
-				</div>
-				<!-- /.sidebar -->
-			</aside>
-
-			<!-- Content Wrapper. Contains page content -->
-			<div class="content-wrapper">
-				<!-- Content Header (Page header) -->
-				<section class="content-header">
-					<div class="container-fluid">
-						
-					</div><!-- /.container-fluid -->
-				</section>
-
-				<!-- Main content -->
-				<section class="content">
-
-					<!-- Default box -->
-					<div class="card">
-						<div class="card-header">
-							<div class="card-tools">
-								<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-									<i class="fas fa-minus"></i>
-								</button>
-								<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-									<i class="fas fa-times"></i>
-								</button>
-							</div>
-						</div>
-							
-				
-						
-						<div class="card-footer">
-							Footer
-						</div>
-						<!-- /.card-footer-->
-					</div>
-					<!-- /.card -->
-
-				</section>
-				<!-- /.content -->
-			</div>
-			<!-- /.content-wrapper -->
-
-			<footer class="main-footer">
-				<div class="float-right d-none d-sm-block">
-					<b>Version</b> 1.0LTS
-				</div>
-				<strong>Copyright &copy; 2014-2020 <a href="#">ResumeBulider</a>.</strong> All rights
-				reserved.
-			</footer>
-
-			<!-- Control Sidebar -->
-			<aside class="control-sidebar control-sidebar-dark">
-				<!-- Control sidebar content goes here -->
-			</aside>
-			<!-- /.control-sidebar -->
-		</div>
-		<!-- ./wrapper -->
-
-		<!-- jQuery -->
-		<script src="assets/template/plugins/jquery/jquery.min.js"></script>
-		<!-- Bootstrap 4 -->
-		<script src="assets/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-		
-		<script src="assets/template/plugins/datatables/jquery.dataTables.min.js"></script>
-		<script src="assets/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-        <script src="assets/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-		<script src="assets/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-		<script src="assets/template/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-		<script src="assets/template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-		<script src="assets/template/plugins/jszip/jszip.min.js"></script>
-		<script src="assets/template/plugins/pdfmake/pdfmake.min.js"></script>
-		<script src="assets/template/plugins/pdfmake/vfs_fonts.js"></script>
-		<script src="assets/template/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-		<script src="assets/template/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-		<script src="assets/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-		
-		
-		<!-- AdminLTE App -->
-		<script src="assets/template/dist/js/adminlte.min.js"></script>
-		<!-- AdminLTE for demo purposes -->
-		<script src="assets/template/dist/js/demo.js"></script>
-
-		<script>
-			$(document).ready(function(){
-
-				$("#example1").DataTable({
-					"responsive": true, "lengthChange": false, "autoWidth": false,
-					"buttons": [ "pdf", "print"]
-				  }).buttons().container().appendTo("#example1_wrapper .col-md-6:eq(0)");
-
-
-
-				
-
-			});
-			</script>
-
-
-
-	</body>
 </body>
 
 </html>
